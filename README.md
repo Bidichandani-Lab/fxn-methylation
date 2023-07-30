@@ -20,7 +20,7 @@ the methylation of each amplicon (1-5) included in these studies.
 Navigate to the directory where you would like to keep this project and run the following commands to build the project:
 
 ```bash
-git clone <repo link>
+git clone https://github.com/Bidichandani-Lab/fxn-methylation.git
 cd fxn-methylation
 docker build . -t fxn-methylation
 ```
