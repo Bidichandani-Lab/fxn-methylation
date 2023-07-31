@@ -4,9 +4,9 @@ This is a pipeline to analyze DNA methylation of *FXN* CPG island / shore which 
 which includes the *FXN* promoter, exon 1 and intron 1. To learn more about the origin of this process and other 
 related information, you can read the following:
 
-*Lists papers*
+[Methylated and unmethylated epialleles support variegated epigenetic silencing in Friedreich ataxia](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7861014/)
 
-Using this pipeline, you will be able to generate figures like the ones in [Paper name](). Also included are stats on
+Using this pipeline, you will be able to generate figures like the ones in the above paper. Also included are stats on
 the methylation of each amplicon (1-5) included in these studies.
 
 ## Installation
@@ -43,6 +43,10 @@ Replace the following in the command above before running:
 
 `<output directory>`: The directory on your computer where you want your results.
 
+***NEW RESULTS WILL OVERWRITE EXISTING RESULTS***
+
+***(\<output directory>/SAMPLE1 will be deleted when running SAMPLE1 again)***
+
 ## Usage
 
 Now you should be in a new shell in the /app directory. From here, you are able to run the script:
@@ -59,7 +63,7 @@ you could run the above command using amplicons 2 to 5 as well:
 ./run_pipeline.sh -a2 -a3 -a4 -a5 in/*.fastq.gz
 ```
 
-> 💡 In [Research paper name]() we found that only methylation in amplicon 3 had a significant difference between those 
+> 💡 In [Methylated and unmethylated epialleles support variegated epigenetic silencing in Friedreich ataxia](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7861014/) we found that only methylation in amplicon 3 had a significant difference between those 
 > with and without FRDA. However, if your sample contains amplicon 1, you can still run the pipeline to verify those 
 > results by adding *-a1* to the command. Running with *-a1* when the sample doesn't contain amplicon 1 will result 
 > in an error. Amplicon 1 has been excluded when using Next-generation sequencing on modern samples to reduce costs.
