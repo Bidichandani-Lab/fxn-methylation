@@ -64,8 +64,7 @@ def validate_aligned_file(filepath: str, amp: int) -> Optional[list[list[int]]]:
     validated_line = lines[0].strip()
     if validation_strs[expected_amplicon - 1] != validated_line:
         raise ValidationError(f"error with amplicon {amp}: {validated_line} != "
-                              f"{validation_strs[expected_amplicon - 1]} "
-                              f"make sure this sample includes amplicon 1")
+                              f"{validation_strs[expected_amplicon - 1]} ")
     return filter_cpg_rows(filepath, lines, amp)
 
 
@@ -85,7 +84,6 @@ def create_heatmap(arr: np.ndarray, filepath: Path):
     image_format = "svg"
 
     fig.savefig(filepath, format=image_format, dpi=1200)
-    fig.show()
 
 
 def save_stats(arr: np.ndarray, filepath: Path, amp: int):

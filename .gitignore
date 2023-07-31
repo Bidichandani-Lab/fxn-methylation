@@ -1,4 +1,7 @@
 .idea
 .vscode
-*.pyc
 
+.DS_Store
+
+*.pyc
+.python-version
